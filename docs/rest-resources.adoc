@@ -1,0 +1,76 @@
+= REST resources of jaxrs analyzer tutorial
+1.0.0
+
+== `GET service/persons/xml`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/xml`
+
+==== `200 OK`
+*Response Body*: (`com.hascode.ra_samples.Person`) + 
+`application/json`: `[{"firstName":"string","lastName":"string","id":0,"email":"string"}]` + 
+
+== `GET service/secure/person`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`com.hascode.ra_samples.Person`) + 
+`application/json`: `{"firstName":"string","lastName":"string","id":0,"email":"string"}` + 
+
+== `GET service/single-user`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`com.hascode.ra_samples.User`) + 
+`application/json`: `{"firstName":"string","lastName":"string","id":0,"email":"string"}` + 
+
+== `GET service/single-user/xml`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/xml`
+
+==== `200 OK`
+*Response Body*: (`com.hascode.ra_samples.User`) + 
+`application/json`: `{"firstName":"string","lastName":"string","id":0,"email":"string"}` + 
+
+== `GET service/status/notfound`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `text/plain`
+
+==== `404 Not Found`
+
+== `GET service/user/create`
+
+=== Request
+_No body_ + 
+*Query Param*: firstName, java.lang.String + 
+*Query Param*: lastName, java.lang.String + 
+*Query Param*: email, java.lang.String + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`com.hascode.ra_samples.User`) + 
+`application/json`: `{"firstName":"string","lastName":"string","id":0,"email":"string"}` + 
+
